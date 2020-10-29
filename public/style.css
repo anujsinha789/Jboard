@@ -1,0 +1,299 @@
+ * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin : 0px;
+  }
+  .main-board{
+    visibility: visible;
+  }
+  .container{
+      padding: 0px;
+      margin: 0px;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #3f51b5;
+    overflow: hidden;
+  }
+.canvas-container{
+  width : 100%;
+  height: 100%;
+}
+  
+  .whiteboard {
+    position: absolute;
+    top : 1px;
+    height: 100%;
+    width: 100%;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+    border-radius : 5px;
+    background-color: #263238;
+  }
+  
+  .colors {
+    display: inline-block;
+    position: absolute;
+    height : 150px;
+    width: 220px;   
+    left : 80px;
+    text-align : center;
+    border :none;
+    border-radius : 20px;
+    visibility: hidden;
+    transition: ease-in 0.05s;
+    /* background-image: url('./assets/color_picker_bg.jpg'); */
+    background-color: #ff1744;
+    border : 2px solid black;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .color {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    border-radius: 20px;
+    margin : 5px;
+    margin-top : 10px;
+    box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+    border : 1px solid black;
+  }
+  .color:hover{
+    border : 2px solid white;
+    transition: ease-in .3s;
+    cursor: pointer;
+  }
+
+  
+  .color.black { background-color: black;}
+  .color.red { background-color: red; }
+  .color.green { background-color: green; }
+  .color.blue { background-color: blue; }
+  .color.yellow { background-color: yellow; }
+  .color.eraser { background-color: #263238; }
+
+  .color.eraser:hover{
+    border : 2px solid white;
+    transition: ease-in .3s;
+    cursor: pointer;
+  }
+
+.thickness-variations{
+   visibility: hidden;
+   display: inline-block;
+   position: absolute;
+   background-color: #0000002c;
+   height : 150px;
+   width: 220px;
+   left : 80px;
+   /* text-align : center; */
+   border : 2px solid rgba(0, 0, 0, 0.438);
+   top : 60px;
+   border-radius : 20px;
+   transition: ease-in 0.05s;
+}
+.thickness{
+  background-color: #3f51b5;
+  position: absolute;
+  width : 80%;
+  left : 20px;
+  border-radius: 20px;
+}
+.thickness:hover{
+  background-color: #ff1744;
+  border : 1px solid white;
+  transition: ease-in 0.2s;
+}
+.one_px{
+  height : 1px;
+  top : 20px;
+  background-color : black;
+  cursor: pointer;
+}
+
+.two_px{
+  height : 2px;
+  top : 40px;
+  background-color : black;
+  cursor: pointer;
+}
+.four_px{
+  height : 4px;
+  top : 60px;
+  background-color : black;
+  cursor: pointer;
+}
+.ten_px{
+  top : 80px;
+  height : 10px;
+  background-color : black;
+  cursor: pointer;
+}
+.twenty_px{
+  top : 110px;
+  height : 20px;
+  background-color : black;
+  cursor: pointer;
+}
+.control-panel{
+  position: absolute;
+  display: inline-block;
+  top : 150px;
+  left : 10px;
+  width : 100px;
+  height : 50%;
+  visibility: visible;
+}
+.color-picker{
+  display: inline-block;
+  position: absolute;
+  height : 60px;
+  width : 60px;
+  top : 20px;
+  margin : 5px;
+  border : none;
+  border-radius : 100px;
+  background-color:#3f51b5;
+  cursor : pointer;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+  text-align: center;
+}
+.color-picker:hover{
+  zoom: 1.025;
+}
+.color-text{
+  font-size : 10px;
+  color:black;
+}
+.brush-thickness-picker{
+  display: inline-block;
+  position: absolute;
+  height : 60px;
+  width : 60px;
+  top : 100px;
+  border : none;
+  border-radius : 100px;
+  margin : 5px;
+  background-color: #ff1744;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+.brush-thickness-picker:hover{
+  zoom: 1.025;
+}
+.set-background{
+  display: inline-block;
+  position: absolute;
+  height : 60px;
+  width : 60px;
+  top : 180px;
+  border : none;
+  margin : 5px;
+  border-radius : 100px;
+  background-color:coral;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+.set-background:hover{
+  zoom: 1.025;
+}
+.control-panel_chat{
+  position: absolute;
+  display: inline-block;
+  background-color: none;
+  height : 250px;
+  width : 70px;
+  right : 4px;
+  top : 155px;
+}
+.chatBox_icon{
+  display: inline-block;
+  position: absolute;
+  height : 60px;
+  width : 60px;
+  top : 15px;
+  margin : 5px;
+  border : none;
+  border-radius : 100px;
+  background-color:chartreuse;
+  cursor : pointer;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.9);
+  text-align: center;
+}
+.chatBox_icon:hover{
+  zoom: 1.025;
+}
+.red_circle{
+  position: absolute;
+  top : 5px; 
+  left : 10px;
+  height : 15px;
+  width: 15px;
+  border-radius : 50px;
+  background-color: #ff1744;
+  visibility : hidden;
+  transition: ease-in 0.3s;
+}
+  
+.chatBox-container{
+  position: absolute;
+  display: inline-block;
+  width :250px;
+  top : 150px;
+  right : 75px;
+  height: 250px;
+  visibility : hidden; 
+  border-radius: 5px;
+}
+.chatBox{
+  display: inline-block;
+  background-color :#26323870;
+  width :100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 2px solid black;
+  overflow-y: auto;
+}
+.send-container{
+  width: 100%;
+  top : 100px;
+  /* visibility: hidden; */
+}
+#msg-input{
+  display: inline-block;
+  position: absolute;
+  width: 190px;
+  padding: 10px;
+  border : none;
+  border-radius: 5px;
+  height: 6vh;
+  background-color: rgb(206, 206, 206);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#submit_btn{
+  position: absolute;
+  width: 50px;
+  right : 4px;
+  height: 6vh;
+  border: none;
+  background-color: #ff1744;
+  border-radius: 5px;
+}
+
+.voiceChat{
+  position: absolute;
+  display: inline-block;
+  background-color : yellow;
+  width :19%;
+  top : 65%;
+  left : 80%;
+  margin-left : .5%;
+  margin-right : .5%;
+  height: 30%;
+  border-radius: 5px;
+}

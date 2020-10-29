@@ -1,0 +1,21 @@
+.message{
+    border: 0px solid rgb(255, 255, 255);
+    background-color: rgba(255, 143, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 17px 0px;
+    font-size: .75em;
+}
+.left{
+    margin: 2px;
+    background-color: rgb(229, 255, 0);
+    float:left;
+    clear: both;
+    margin-left: 2%;
+}
+.right{
+    background-color: rgb(0, 140, 255);
+    float:right;
+    clear: both;
+    margin-right: 2%;
+}
