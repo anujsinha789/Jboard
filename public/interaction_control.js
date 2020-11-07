@@ -41,6 +41,7 @@ function thickness_pallete_hidden(){
 }
 
 function chatBox_container_hidden(){
+    
     chatBox_container.style.visibility = "hidden";
 }
 function chatBox_container_visible(){
@@ -54,7 +55,7 @@ function chatBox_container_selector(){
     msg_notif.style.visibility = "hidden";   
 }
 
-
+// setTimeout(chatBox_container_hidden,2000);
 clr_picker.addEventListener('click',displayColorPicker);
 clr_pallete.addEventListener('mouseout',ColorPicker_hidden);
 clr_pallete.addEventListener('mouseover',ColorPicker_visible);

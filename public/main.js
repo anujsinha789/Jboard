@@ -39,7 +39,14 @@
     colors[i].addEventListener('click', onColorUpdate, false);
   }
 
-  socket.on('drawing', onDrawingEvent);
+  socket.on('room-created',(room) =>{
+    socket.emit('room-id',room);
+  });
+  socket.on('drawing', (data) => {
+    var w = canvas.width;
+    var h = canvas.height;
+    drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color,data.width);
+  });
 
   window.addEventListener('resize', onResize, false);
   onResize();
@@ -85,15 +92,14 @@
       context.lineWidth = emit ? LWidth : width;
     context.stroke();
     context.closePath();
-
     if (!emit) { return; }
-    socket.emit('drawing', {
+    socket.emit('drawing',roomName,{
       x0: x0 / w,
       y0: y0 / h,
       x1: x1 / w,
       y1: y1 / h,
       color: color,
-      width : context.lineWidth
+      width : context.lineWidth,
     });
   }
 
@@ -131,12 +137,6 @@
         callback.apply(null, arguments);
       }
     };
-  }
-
-  function onDrawingEvent(data){
-    var w = canvas.width;
-    var h = canvas.height;
-    drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color,data.width);
   }
 
   // make the canvas fill its parent
